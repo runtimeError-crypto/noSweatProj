@@ -1,2 +1,1 @@
 # projSocialMedia
-# noSweatProj
