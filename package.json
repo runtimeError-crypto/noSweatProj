@@ -2,5 +2,8 @@
   "dependencies": {
     "mongod": "^2.0.0",
     "mongosh": "^0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

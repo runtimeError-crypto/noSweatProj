@@ -17,6 +17,8 @@ const kittySchema = new mongoose.Schema({
 });
 //.So far so good. We've got a schema with one property, name, which will be a String. The next step is compiling our schema into a Model.
 
+let Kitten;
+Kitten = mongoose.model("Kitten", kittySchema);
 Kitten = mongoose.model("Kitten", kittySchema);
 /* A model is a class with which we construct documents. In this case, each document will be a kitten with properties and behaviors as declared in our schema. Let's create a kitten document representing the little guy we just met on the sidewalk outside:
  */
@@ -32,15 +34,14 @@ kittySchema.methods.speak = function speak() {
   console.log(greeting);
 };
 
-const Kitten = mongoose.model("Kitten", kittySchema);
-
 // Functions added to the methods property of a schema get compiled into the Model prototype and exposed on each document instance:
 
 const fluffy = new Kitten({ name: "fluffy" });
 fluffy.speak(); // "Meow name is fluffy"
 // We have talking kittens! But we still haven't saved anything to MongoDB. Each document can be saved to the database by calling its save method. The first argument to the callback will be an error if any occurred.
 
-await fluffy.save();
+addEventListener(/* A type of event. */ type, listener);
+fluffy.save();
 fluffy.speak();
 // Say time goes by and we want to display all the kittens we've seen. We can access all of the kitten documents through our Kitten model.
 
@@ -50,3 +51,5 @@ console.log(kittens);
 
 await Kitten.find({ name: /^fluff/ });
 // This performs a search for all documents with a name property that begins with "fluff" and returns the result as an array of kittens to the callback.
+
+export {};
