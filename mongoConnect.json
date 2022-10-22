@@ -1,0 +1,10 @@
+{
+	"instantMongo": {
+		"connections": [
+			{
+				"name": "New Database Connection",
+				"uri": "https://cloud.mongodb.com/v2/61b422df1206554caa95f385#clusters"
+			}
+		]
+	}
+}
