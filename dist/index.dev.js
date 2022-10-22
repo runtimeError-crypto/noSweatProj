@@ -28,6 +28,7 @@ function auth(req, res, next) {
   next();
 }
 
+aa;
 app.get("/posts", function (req, res) {
   Post.find({}).then(function (posts) {
     res.json(posts);
@@ -61,7 +62,7 @@ app.put("/post/:id", auth, function (req, res) {
     res.json(test);
   });
 });
-app["delete"]("/post/:id", function (req, res) {
+app["delete"]("/post/:id", auth, function (req, res) {
   Post.findByIdAndDelete(req.params.id).then(function (post) {
     res.json(post);
   });
